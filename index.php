@@ -23,7 +23,16 @@
                <td><?php echo $room['id']; ?></td>
                <td><?php echo $room['room_number']; ?></td>
                <td><?php echo $room['floor']; ?></td>
-               <td>View</td>
+               <td>
+                <a href="<?php echo $localhost . '/view/view.php?id=' . $room['id']; ?>">View</a>
+                  -
+                <a href="<?php echo $localhost . '/update/edit.php?id=' . $room['id']; ?>">Change</a>
+
+                <form action="<?php echo $localhost. '/delete/delete.php' ?>" method="post">
+                  <input type="hidden" name="formid" value="<?php echo $room['id']; ?>">
+                 <input type="submit" value="Delete">
+               </form>
+               </td>
              </tr>
              <!-- Fine singola stanza -->
            <?php } ?>
