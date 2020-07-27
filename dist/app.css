@@ -36,6 +36,15 @@ main table td {
   padding: 10px;
 }
 
+main table form {
+  display: inline-block;
+}
+
+main table form input {
+  padding: 5px 15px;
+  vertical-align: middle;
+}
+
 main a {
   color: black;
   text-decoration: none;

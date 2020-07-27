@@ -27,7 +27,7 @@
                 <a href="<?php echo $localhost . '/view/view.php?id=' . $room['id']; ?>">View</a>
                   -
                 <a href="<?php echo $localhost . '/update/edit.php?id=' . $room['id']; ?>">Change</a>
-
+                  -
                 <form action="<?php echo $localhost. '/delete/delete.php' ?>" method="post">
                   <input type="hidden" name="formid" value="<?php echo $room['id']; ?>">
                  <input type="submit" value="Delete">
