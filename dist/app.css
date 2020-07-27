@@ -14,17 +14,20 @@ header h1 {
   color: white;
 }
 
-table {
+main {
   padding: 10px;
+}
+
+main table {
   font-size: 26px;
 }
 
-table th {
-  padding: 0 5px;
+main table th {
+  padding: 0 5px 0 0;
 }
 
-table td {
+main table td {
   border: 2px solid black;
-  padding: 5px;
+  padding: 10px;
 }
 

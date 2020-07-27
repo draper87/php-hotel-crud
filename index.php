@@ -1,23 +1,10 @@
 <?php
 
-  include __DIR__ . '/database.php';
+  include __DIR__ . '/env.php';
+  include __DIR__ . '/server.php';
+  include __DIR__ . '/partials/header.php';
 
  ?>
-
-
-
- <!DOCTYPE html>
- <html lang="en" dir="ltr">
-   <head>
-     <meta charset="utf-8">
-     <title>Boolean Hotel</title>
-     <link rel="stylesheet" href="dist/app.css">
-   </head>
-   <body>
-
-     <header>
-       <h1>Boolean Hotel</h1>
-     </header>
 
 
      <main>
@@ -30,27 +17,17 @@
            </tr>
          </thead>
          <tbody>
-           <!-- Singola stanza -->
-           <tr>
-             <td>1</td>
-             <td>101</td>
-             <td>3</td>
-           </tr>
-           <!-- Fine singola stanza -->
-           <!-- Singola stanza -->
-           <tr>
-             <td>1</td>
-             <td>101</td>
-             <td>3</td>
-           </tr>
-           <!-- Fine singola stanza -->
-           <!-- Singola stanza -->
-           <tr>
-             <td>1</td>
-             <td>101</td>
-             <td>3</td>
-           </tr>
-           <!-- Fine singola stanza -->
+           <?php foreach ($roomArray as $room) { ?>
+             <!-- Singola stanza -->
+             <tr>
+               <td><?php echo $room['id']; ?></td>
+               <td><?php echo $room['room_number']; ?></td>
+               <td><?php echo $room['floor']; ?></td>
+               <td>View</td>
+             </tr>
+             <!-- Fine singola stanza -->
+           <?php } ?>
+
          </tbody>
        </table>
      </main>
